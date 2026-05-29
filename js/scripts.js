@@ -3,6 +3,9 @@
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
 */
+//
+// Scripts
+// 
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -17,6 +20,7 @@ window.addEventListener('DOMContentLoaded', event => {
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
         }
+
     };
 
     // Shrink the navbar 
@@ -27,33 +31,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
-    let scrollSpyInstance = null;
-
     if (mainNav) {
-        scrollSpyInstance = new bootstrap.ScrollSpy(document.body, {
+        new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
-            rootMargin: '-75px 0px -85% 0px', 
+            rootMargin: '0px 0px -75%',
         });
-    }
-    
-    // Force highlight last section when reaching the bottom of the page
-    window.addEventListener('scroll', () => {
-        const responsiveNavItems = document.querySelectorAll('#navbarResponsive .nav-link');
-        if (responsiveNavItems.length === 0) return;
-
-        // Check if user reached the absolute bottom of the page
-        const isAtBottom = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 10);
-
-        if (isAtBottom) {
-            // Remove active class from all nav items
-            responsiveNavItems.forEach(item => item.classList.remove('active'));
-            // Add active class to the very last nav item
-            responsiveNavItems[responsiveNavItems.length - 1].classList.add('active');
-        } else if (scrollSpyInstance) {
-            // Refresh ScrollSpy if we are not at the bottom to restore normal behavior
-            scrollSpyInstance.refresh();
-        }
-    });
+    };
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
