@@ -91,23 +91,26 @@
             </div>
         </section>
         <!-- Vertical Image Section-->
-        <section class="page-section portfolio" id="vert-img">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-white"></h2>
-                <img class="img-fluid mb-0" src="./assets/extra-02.png" alt="Φωνή & Λόγος" />
-                <h2 class="page-section-heading text-center text-uppercase text-white"></h2>
+        <section class="min-vh-100 d-flex align-items-center justify-content-center py-5 bg-dark">
+            <div class="container text-center"> 
+                <img class="img-fluid mx-auto d-block" src="./assets/extra-02.png" alt="Φωνή & Λόγος" style="max-height: 50vh;"> 
             </div>
-        </section>       
+        </section>
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container" id="footer">
                 <div class="row justify-content-center">
-                    <!-- Κεντρικό block 8 στηλών, με κείμενο στοιχισμένο αριστερά -->
-                    <div class="col-md-8 text-start" id="cominfo">
-                        <!-- Τίτλος (κεντραρισμένος πάνω από τις στήλες) -->
-                        <h4 class="text-uppercase text-center mb-4">Στοιχεια Επικοινωνιας</h4>
+                    <!-- Κεντρικό block 8 στηλών -->
+                    <div class="col-md-8" id="cominfo">
                         
-                        <div class="row justify-content-center">
+                        <!-- Η εσωτερική γραμμή που ευθυγραμμίζει τίτλο και στήλες μαζί -->
+                        <div class="row justify-content-center text-start">
+                            
+                            <!-- Ο τίτλος πιάνει όλο το πλάτος (col-12) και κεντράρεται απόλυτα ως προς τις στήλες -->
+                            <div class="col-12 text-center mb-4">
+                                <h4 class="text-uppercase mb-0">Στοιχεια Επικοινωνιας</h4>
+                            </div>
+                            
                             <!-- Αριστερή Στήλη: Τηλέφωνο & Email -->
                             <div class="col-sm-6 col-md-5 d-flex flex-column align-items-start mb-3">
                                 <div class="text-with-icon d-flex align-items-center mb-3">
@@ -139,6 +142,7 @@
                                     <span class="fs-6">Linkedin Profile</span>
                                 </div>
                             </div>
+        
                         </div>
                     </div>
                 </div>
