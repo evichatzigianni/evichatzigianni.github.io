@@ -32,10 +32,10 @@ window.addEventListener('DOMContentLoaded', event => {
     if (mainNav) {
         scrollSpyInstance = new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
-            rootMargin: '-75px 0px 0px 0px',
+            rootMargin: '-75px 0px -85% 0px', 
         });
     }
-
+    
     // Force highlight last section when reaching the bottom of the page
     window.addEventListener('scroll', () => {
         const responsiveNavItems = document.querySelectorAll('#navbarResponsive .nav-link');
